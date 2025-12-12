@@ -1,0 +1,5 @@
+package Fase2.ContadorPalavras;
+
+public class Principal {
+    
+}
