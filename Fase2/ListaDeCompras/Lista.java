@@ -33,7 +33,7 @@ public class Lista {
                     System.out.println("Sua lista possui " + lista.size() + " item(ns).");
                     break;
                 case 4:
-                    System.out.println("Itens na lista: \n" + toString);
+                    verificaLista();
                     break;
                 default:
                     break;
@@ -56,8 +56,21 @@ public class Lista {
         System.out.println("Item removido com sucesso!");
     }
 
+    public void verificaLista() {
+        System.out.println("Verificando itens na lista...");
+        if (lista.isEmpty()) {
+            System.out.println("Você ainda não tem itens na lista.");
+        } else {
+            System.out.println("Item(ns) na lista: \n" + this.toString());
+        }
+    }
+
     @Override
     public String toString() {
-        return String.join("\n", lista);
+        StringBuilder limpo = new StringBuilder();
+        for (String item : lista) {
+            limpo.append(item).append("\n");
+        }
+        return limpo.toString();
     }
 }
